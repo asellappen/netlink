@@ -15,8 +15,8 @@ before_script:
   # modprobe nf_conntrack for the conntrack testing
   -  sudo modprobe nf_conntrack
   -  sudo modprobe nf_conntrack_netlink
-  -  modprobe nf_conntrack_ipv4
-  -  modprobe nf_conntrack_ipv6
+  -  sudo modprobe nf_conntrack_ipv4
+  -  sudo modprobe nf_conntrack_ipv6
   -  sudo modprobe sch_hfsc
 install:
   - go get -v -t ./...
