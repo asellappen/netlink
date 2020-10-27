@@ -14,11 +14,11 @@ before_script:
   # modprobe ip_gre or else the first gre device can't be deleted
   -  sudo modprobe ip_gre
   # modprobe nf_conntrack for the conntrack testing
-  -  modprobe nf_conntrack
-  -  modprobe nf_conntrack_netlink
-  -  modprobe nf_conntrack_ipv4
-  -  modprobe nf_conntrack_ipv6
-  -  modprobe sch_hfsc
+  -  sudo modprobe nf_conntrack
+  -  sudo modprobe nf_conntrack_netlink
+ # -  modprobe nf_conntrack_ipv4
+ # -  modprobe nf_conntrack_ipv6
+  -  sudo modprobe sch_hfsc
 install:
   - go get -v -t ./...
 go_import_path: github.com/vishvananda/netlink
